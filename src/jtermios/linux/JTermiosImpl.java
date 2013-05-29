@@ -36,30 +36,20 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.io.IOException;
 
+import java.lang.reflect.Method;
 import java.nio.Buffer;
 
 import java.nio.ByteBuffer;
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 import java.util.regex.Pattern;
 
-import jtermios.FDSet;
+import com.sun.jna.*;
+import jtermios.*;
 
-import jtermios.JTermios;
-import jtermios.Pollfd;
-import jtermios.Termios;
-import jtermios.TimeVal;
 import jtermios.JTermios.JTermiosInterface;
 import jtermios.linux.JTermiosImpl.Linux_C_lib.pollfd;
 import jtermios.linux.JTermiosImpl.Linux_C_lib.serial_struct;
 
-import com.sun.jna.Library;
-import com.sun.jna.Native;
-import com.sun.jna.NativeLong;
-import com.sun.jna.Pointer;
-import com.sun.jna.Structure;
 import com.sun.jna.ptr.IntByReference;
 import com.sun.jna.ptr.NativeLongByReference;
 
@@ -168,7 +158,7 @@ public class JTermiosImpl implements jtermios.JTermios.JTermiosInterface {
 
 		static {
 			try {
-				Native.register("c");
+				Native.register(NativeLibrary.getInstance("c", YJPFunctionMapper.OPTIONS));
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

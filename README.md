@@ -1,5 +1,11 @@
+About this fork
+===============
+
 This is a fork of PureJavaComm that fixes incompatilibily between JNA and YourKit Java Profiler using FunctionMapper 
 on register, for details read https://github.com/twall/jna/issues/236
+
+PureJavaComm
+============
 
 
 PureJavaComm is an Application Programmin Interface (API) for accessing serial ports from Java, so this is a library aimed at programmers, not end users.

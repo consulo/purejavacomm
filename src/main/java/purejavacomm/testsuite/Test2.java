@@ -29,7 +29,6 @@
  */
 package purejavacomm.testsuite;
 
-import java.util.Arrays;
 import java.util.Random;
 
 import purejavacomm.SerialPort;

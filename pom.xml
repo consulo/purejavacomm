@@ -57,18 +57,6 @@
 	</distributionManagement>
 
 	<build>
-		<!-- target directory : where *.class are -->
-		<directory>${basedir}/bin</directory>
-		<!-- java sources directory -->
-		<sourceDirectory>${basedir}/src</sourceDirectory>
-		<!-- java test sources directory -->
-		<!-- not needed -->
-		<!-- <testSourceDirectory>${basedir}/src/test/java</testSourceDirectory>  -->
-
-		<outputDirectory>${basedir}/classes</outputDirectory>
-		<!-- not needed -->
-		<!-- <testOutputDirectory>${basedir}/test-classes</testOutputDirectory> -->
-
 		<extensions>
 			<extension>
 				<groupId>org.apache.maven.wagon</groupId>
